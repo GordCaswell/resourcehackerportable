@@ -7,6 +7,7 @@
 			  crossorigin="anonymous"></script>
 </head>
 <body>
+<a class="btn resourcehackerportable-download" role="button" data-toggle="tooltip" data-placement="bottom" title="" href="https://github.com/GordCaswell/ResourceHackerPortable/releases/latest">Download</a>
 <script type="text/javascript">
     $(document).ready(function () {
         GetLatestReleaseInfo();
@@ -31,8 +32,8 @@
             {
                 timeAgo = (dateDiff / oneDay).toFixed(1) + " days ago";
             }
-            var releaseInfo = release.name + " was updated " + timeAgo + " and downloaded " + downloadCount.toLocaleString() + " times.";
-            $(".sharex-download").attr("href", asset.browser_download_url);
+            var releaseInfo = release.name + " was released " + timeAgo + " and downloaded " + downloadCount.toLocaleString() + " times.";
+            $(".resourcehackerportable-download").attr("href", asset.browser_download_url);
             $(".release-info").text(releaseInfo);
             $(".release-info").fadeIn("slow");
         });
